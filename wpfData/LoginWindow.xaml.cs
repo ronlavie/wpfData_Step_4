@@ -11,8 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using wpfData_Step_4.Model;
-using wpfData_Step_4.ViewModel;
+using wpfData.ServiceReference1;
 
 namespace wpfData_Step_4
 {
@@ -21,6 +20,7 @@ namespace wpfData_Step_4
     /// </summary>
     public partial class LoginWindow : Window
     {
+        private ServiceSnackClient ServiceSnack;
         public LoginWindow()
         {
             InitializeComponent();
@@ -33,16 +33,16 @@ namespace wpfData_Step_4
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            UserDB userDB = new UserDB();
+           
             User user = new User();
             user.UserName = tbxID.Text;
             user.Password = tbxPassword.Password;
-            user = userDB.login(user);
+            user = ServiceSnack.login(user);
             if (user == null)
             {
                 MessageBox.Show("Dont Exist");
                 return;
-            } user = userDB.login(user);
+            } user = ServiceSnack.login(user);
             if (!user.IsAdmin)
             {
                 MessageBox.Show("Not manager");

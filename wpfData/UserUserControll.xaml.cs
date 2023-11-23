@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,8 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using wpfData_Step_4.Model;
-using wpfData_Step_4.ViewModel;
+using wpfData.ServiceReference1;
 
 namespace wpfData_Step_4
 {
@@ -22,13 +22,19 @@ namespace wpfData_Step_4
     /// </summary>
     public partial class UsersUserControl : UserControl
     {
+        private ServiceSnackClient ServiceSnacK;
+
+        private ServiceSnackClient ServiceSnack;
         public UsersUserControl()
         {
+            
+
+      
             InitializeComponent();
-            UserDB userDB = new UserDB();
-            UserList list = userDB.SelectAll();
-            userListView.ItemsSource = list;
+            ServiceSnack = new ServiceSnackClient();
+            userListView.ItemsSource = ServiceSnack.GetAllCities();
         }
+    }
       
     }
-}
+

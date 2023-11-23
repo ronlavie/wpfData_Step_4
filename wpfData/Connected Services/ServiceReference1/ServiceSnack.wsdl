@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServiceSnack" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceSnack_GetAllCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCities" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetAllCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetSnacks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnacks" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetSnacks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnacksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetUserBySnack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBySnack" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetUserBySnack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBySnackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetUsersBySnack_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersBySnack" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_GetUsersBySnack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersBySnackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSnack_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceSnack">
+    <wsdl:operation name="GetAllCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSnack/GetAllCities" message="tns:IServiceSnack_GetAllCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSnack/GetAllCitiesResponse" message="tns:IServiceSnack_GetAllCities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSnack/GetUsers" message="tns:IServiceSnack_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSnack/GetUsersResponse" message="tns:IServiceSnack_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSnacks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSnack/GetSnacks" message="tns:IServiceSnack_GetSnacks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSnack/GetSnacksResponse" message="tns:IServiceSnack_GetSnacks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBySnack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSnack/GetUserBySnack" message="tns:IServiceSnack_GetUserBySnack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSnack/GetUserBySnackResponse" message="tns:IServiceSnack_GetUserBySnack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersBySnack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSnack/GetUsersBySnack" message="tns:IServiceSnack_GetUsersBySnack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSnack/GetUsersBySnackResponse" message="tns:IServiceSnack_GetUsersBySnack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSnack/login" message="tns:IServiceSnack_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSnack/loginResponse" message="tns:IServiceSnack_login_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceSnack" type="tns:IServiceSnack">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllCities">
+      <soap:operation soapAction="http://tempuri.org/IServiceSnack/GetAllCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IServiceSnack/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSnacks">
+      <soap:operation soapAction="http://tempuri.org/IServiceSnack/GetSnacks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBySnack">
+      <soap:operation soapAction="http://tempuri.org/IServiceSnack/GetUserBySnack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersBySnack">
+      <soap:operation soapAction="http://tempuri.org/IServiceSnack/GetUsersBySnack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IServiceSnack/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceSnack">
+    <wsdl:port name="BasicHttpBinding_IServiceSnack" binding="tns:BasicHttpBinding_IServiceSnack">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

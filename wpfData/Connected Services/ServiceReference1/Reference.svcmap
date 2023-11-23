@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="363ec35d-3d33-4d7c-b7b3-b505de564d6c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="9bea1aa6-bd81-419c-8bf6-cc87cd69c4e5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="59b82c20-ccad-4b06-97d8-34cf2df87433" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/?xsd=xsd1" />
+    <MetadataFile FileName="ServiceSnack.wsdl" MetadataType="Wsdl" ID="20b5319b-eec6-4f62-8989-7aacc20c39ce" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="b509c016-08a5-48d4-a239-83e9c985663f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="77d18237-7747-4241-8fe4-fbf050d59c2f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceModel/IServiceSnack/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
